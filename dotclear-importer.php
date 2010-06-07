@@ -1,5 +1,19 @@
 <?php
-/**
+/*
+Plugin Name: DotClear Importer
+Plugin URI: http://wordpress.org/extend/plugins/dotclear-importer/
+Description: Import categories, users, posts, comments, and links from a DotClear blog.
+Author: wordpressdotorg
+Author URI: http://wordpress.org/
+Version: 0.2
+Stable tag: 0.2
+License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+*/
+
+if ( !defined('WP_LOAD_IMPORTERS') )
+	return;
+
+/*
 	Add These Functions to make our lives easier
 **/
 
@@ -64,20 +78,6 @@ function csc ($s) {
 function textconv ($s) {
 	return csc (preg_replace ('|(?<!<br />)\s*\n|', ' ', $s));
 }
-
-/*
-Plugin Name: DotClear Importer
-Plugin URI: http://wordpress.org/extend/plugins/dotclear-importer/
-Description: Import categories, users, posts, comments, and links from a DotClear blog.
-Author: wordpressdotorg
-Author URI: http://wordpress.org/
-Version: 0.2
-Stable tag: 0.2
-License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-*/
-
-if ( !defined('WP_LOAD_IMPORTERS') )
-	return;
 
 // Load Importer API
 require_once ABSPATH . 'wp-admin/includes/import.php';
