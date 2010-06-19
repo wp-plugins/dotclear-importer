@@ -6,8 +6,7 @@ Description: Import categories, users, posts, comments, and links from a DotClea
 Author: wordpressdotorg
 Author URI: http://wordpress.org/
 Version: 0.2
-Stable tag: 0.2
-License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+License: GPL v2
 */
 
 if ( !defined('WP_LOAD_IMPORTERS') )
@@ -451,7 +450,7 @@ class Dotclear_Import extends WP_Importer {
 				extract($link);
 
 				if ($title != "") {
-					if ($cinfo = is_term(csc ($title), 'link_category')) {
+					if ($cinfo = term_exists(csc ($title), 'link_category')) {
 						$category = $cinfo['term_id'];
 					} else {
 						$category = wp_insert_term($wpdb->escape (csc ($title)), 'link_category');

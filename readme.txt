@@ -4,7 +4,6 @@ Donate link:
 Tags: importer, dotclear
 Requires at least: 3.0
 Tested up to: 3.0
-Stable tag: 0.2
 
 Import categories, users, posts, comments, and links from a DotClear blog.
 
@@ -17,10 +16,6 @@ Import categories, users, posts, comments, and links from a DotClear blog.
 1. Upload the `dotclear-importer` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Go to the Tools -> Import screen, Click on DotClear
-
-== Frequently Asked Questions ==
-
-== Screenshots ==
 
 == Changelog ==
 
